@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "front": "cd jaune-next && npm run dev",
+    "back": "cd jaune-db && npm run dev"
+  }
+}
