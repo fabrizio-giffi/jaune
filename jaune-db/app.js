@@ -6,9 +6,13 @@ const app = express();
 
 require("./config")(app);
 
-// Routes
+// Route handling
 const apiRoutes = require("./routes/api.routes");
 app.use("/api", apiRoutes);
+
+const checkoutRoutes = require("./routes/checkout.routes");
+app.use("/checkout", checkoutRoutes);
+
 
 // Error handling
 require("./error-handling")(app);
