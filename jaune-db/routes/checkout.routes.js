@@ -6,10 +6,10 @@ router.post("/", async (req, res) => {
   try {
     const payment = await stripe.paymentIntents.create({
       amount,
-      currency: "USD",
+      currency: "EUR",
       description: "Mona en Jaune",
       payment_method: id,
-      confirm: true,
+      automatic_payment_methods: { enabled: true },
     });
     console.log("Payment: ", payment);
     res.json({
